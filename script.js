@@ -1,5 +1,4 @@
-
-
+window.scrollTo(0,0);
 window.addEventListener("DOMContentLoaded",
   () => {
     anime({
@@ -30,7 +29,13 @@ anime({
     easing: 'easeInOutExpo',
     duration: 600,
     delay: 270
-  }); 
+  });
+  setTimeout(function () {
+    window.scrollBy({
+      top:70,
+      behavior: 'smooth',
+    });
+  }, 700);
  });
 
 
