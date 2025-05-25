@@ -5,7 +5,9 @@
   --rust-2: #A94923ff;
   --caput-mortuum: #5A1D10ff;
   --caramel: #C68157ff;
+  --caramel-light: rgb(218, 150, 109);
   --sienna: #993A20ff;
+  interpolate-size: allow-keywords;
 }
 @font-face {
     font-family: 'Stanley';
@@ -86,18 +88,18 @@ body {
   left:50%;
 }
 
-  .box{
-    margin: auto;
-    margin-top: 1em;
-    width: 600px;
-    height: 800px;
-    border-radius: 15px;
-    border-width: 2px;
-    border-color:  rgb(226, 226, 226);
-    border-style: solid;
-    padding: 50px;
-    background-color:rgb(255, 255, 255);
-  }
+.box{
+  margin: auto;
+  margin-top: 1em;
+  width: 800px;
+  height: 800px;
+  border-radius: 15px;
+  border-width: 2px;
+  border-color:  rgb(226, 226, 226);
+  border-style: solid;
+  padding: 50px;
+  background-color:rgb(255, 255, 255);
+}
   
   .hero {
     height: 100vh; /* occupe tout l'écran */
@@ -218,7 +220,7 @@ body {
 
   .intro {
     margin: auto;
-    width: 500px;
+    width: 700px;
     color: rgb(49, 49, 49)
   }
 
@@ -235,7 +237,7 @@ body {
   .comment {
     margin: auto;
     font-style: italic;
-    width: 500px;
+    width: 700px;
     color: rgba(114, 114, 114, 0.5)
   }
 
@@ -246,6 +248,20 @@ body {
     overflow: hidden;
     border-bottom-style: double;
     border-width: 10px;
+    /* border-color: var(--caput-mortuum); */
+    border-color: rgb(226, 226, 226);
+    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(14, 12, 12) */
+  }
+
+    .courses {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    /* border-style:double; */
+    border-width: 2px;
+    border-radius: 10px;
     /* border-color: var(--caput-mortuum); */
     border-color: rgb(226, 226, 226);
     background-color: rgb(255, 255, 255);
@@ -280,17 +296,94 @@ body {
     text-decoration: none;
   }
 
+  a.course {
+    background-color: var(--caramel-light);
+    font-size: large;
+    color: white;
+    border-radius: 5px;
+    width: 100%;
+    display: block;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  a.course p {
+    list-style-type: square;
+    font-family:Arial, Helvetica, sans-serif;
+    /* margin: 10%; */
+    font-size: medium;
+    color: var(--caramel-light);
+  }
+
+  ul.material {
+    list-style-type: square;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: var(--caramel-light);
+    padding:0 10%;
+    padding-bottom: 10%;
+    display: block;
+
+  }
+  ul.material li {
+     
+    float: left;
+    clear: left;
+    line-height: 0.5em;
+    color: var(--caramel-light);
+  }
+
+
+  a.course li {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: var(--caramel-light);
+  }
+
+  ul.courses {
+    height:500px;
+    width: 800px;
+  }
+  li.course-li {
+    width: 93.5%;
+  }
+
+  .expand-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    background: #ffffff;
+    margin-top: 5px;
+    padding: 0 20px;
+    border-style: dashed;
+    /* border-radius: 0 0 6px 6px; */
+    border-color: var(--caramel-light);
+  }
+  .expand-content p {
+    text-align: justify;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+
+  a.course:hover .expand-content {
+    max-height: 200px;
+    padding: 0 20px;
+    /* border-radius: 0 0 6px 6px; */
+    border-style: dashed;
+  }
+
   li a:hover {
-    background-color: var(--caramel);
+    background-color: var(--caramel-light);
     color: white;
     border-radius: 5px;
     transition: ease-in-out;
     transition-duration: 100ms;
-  }
-
+  } 
 
   .header-education {
-    height: 30vh; /* occupe tout l'écran */
+    height: 100vh; /* occupe tout l'écran */
     /* background: url('images/pawel-czerwinski-lkUIMowfVt4-unsplash.jpg') no-repeat center center/cover; */
     background: url('images/pawel-czerwinski-RL6635ZURy0-unsplash.jpg') no-repeat center center/cover;
     color: white;
