@@ -12,7 +12,7 @@ window.addEventListener("DOMContentLoaded",
     height: '30vh',
     easing: 'easeInOutExpo',
     duration: 600,
-    delay:550
+    delay:1000
   });
   setTimeout(function () {
     window.scrollBy({
@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded",
       behavior: 'smooth',
     });
   }, 700);
- });
+});
 
 
 
