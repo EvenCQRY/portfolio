@@ -64,3 +64,12 @@ anime({
   //   opacity: [0, 1],
   //   offset: '-=600' // commence avant la fin du précédent
   // });
+
+  const course = document.getElementsByClassName('course');
+  document.addEventListener('click', function(e){
+    if (course.contains(e.target)){
+      course.classList.toggle('hover-fake');
+    } else {
+      course.classList.remove('hover-fake');
+    }
+  });

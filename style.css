@@ -387,6 +387,14 @@ body {
     z-index: 1000;
   }
 
+  a.course:hover-fake .expand-content {
+    max-height: 250px;
+    max-width: 600px;
+    padding: 0 20px;
+    border-style:solid;
+    z-index: 1000;
+  }
+
   li a:hover {
     background-color: var(--caramel-light);
     color: white;
