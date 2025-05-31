@@ -5,6 +5,7 @@
   <title>Even Coquery</title>
   <link rel="icon" href="images/moon.png">
   <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
 </head>
 <body>
   <header class="hero">
@@ -59,7 +60,103 @@
       <p class='intro'>Right now, I am in internship at <em>Osservatorio Astronomico di Cagliari, INAF</em>. I work on theoretical aspects of pulsar-black hole binaries. </p>
       <p class="comment">*pronounced "eh-ven"</p>
     </section>
-    </div>
+
+    <div id="network"></div>
+
+  <script>
+    // Define nodes and edges
+    const nodes = new vis.DataSet([
+      { id: 1, 
+        font: {size: 20},
+        label: "Me",
+        shape: 'circle' },
+      { id: 2, 
+        label: "Physics",
+        font: {size: 25} },
+      { id: 3, 
+        label: "Engineering",
+        font: {size: 25} },
+      { id: 4, label: "Music" },
+      { id: 5, label: "Sport" },
+      { id: 6, label: "Coding" }
+    ]);
+
+    const edges = new vis.DataSet([
+      { from: 1, to: 2 },
+      { from: 1, to: 3 },
+      { from: 1, to: 4 },
+      { from: 1, to: 5 },
+      { from: 1, to: 6 }
+    ]);
+
+    // Create a network
+    const container = document.getElementById("network");
+    const data = { nodes, edges };
+    const options = {
+      interaction: { 
+        hover: true,
+        zoomView: false,
+        dragView: false,
+        tooltipDelay: 0 },
+      nodes: {
+        shape: 'box',
+        color: '#C68157ff',
+        // size: 25,
+        font: { size: 25, color: '#ffff', bold: false },
+        borderWidth: 2
+      },
+      edges: {
+        width: 2,
+        color: { color: '#ccc' }
+      }
+    };
+
+    new vis.Network(container, data, options);
+    // network.on("wheel", function (params) {
+    //   params.event.preventDefault();
+    // });
+    // network.body.container.addEventListener("gesturestart", (e) => e.preventDefault());
+    const originalLabels = {};
+
+    // nodes.forEach(node => {
+    //   originalLabels[node.id] = node.label;
+    // });
+    // network.on("hoverNode", function(params) {
+    //   const nodeId = params.node;
+    //   const original = originalLabels[nodeId];
+    //   const extraText = "\n(Advanced Skill)";
+
+    //   let currentLabel = original;
+    //   let index = 0;
+
+    //   function animateLabel() {
+    //     if (index <= extraText.length) {
+    //       nodes.update({ id: nodeId, label: currentLabel + extraText.substring(0, index) });
+    //       index++;
+    //       setTimeout(animateLabel, 50);  // Adjust speed here
+    //     }
+    //   }
+
+    //   animateLabel();
+    // });
+    // network.on("blurNode", function(params) {
+    //   const nodeId = params.node;
+    //   nodes.update({ id: nodeId, label: originalLabels[nodeId] });
+    // });
+
+    network.on("hoverNode", function (params) {
+      console.log(params.node)
+      nodes.update({ id: params.node, color: { background: 'red' } });
+    });
+
+    network.on("blurNode", function (params) {
+      nodes.update({ id: params.node, color: { background: 'blue' } });
+    });
+
+  </script>
+
+  </div>
+
   </main>
 
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
