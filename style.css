@@ -234,7 +234,9 @@ body {
   .year {
     font-family: 'Stanley', Arial, sans-serif;
     text-align: left;
-    margin-bottom: 10px;
+    padding-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 0px;
     width: 700px;
   }
 
@@ -269,20 +271,18 @@ body {
       z-index: 1000;
     }
 
-
-
-
     .courses {
     list-style-type: none;
-    margin: auto;
+    margin: auto;   
     padding-top: 30px;
     overflow: visible;
     border-style:dashed;
     border-width: 2px;
     border-radius: 10px;
-    border-color:  rgb(14, 12, 12);
+    /* border-color:  rgb(14, 12, 12); */
     /* background-color: rgb(255, 255, 255); */
-    height:340px;
+    border-color: var(--sienna);
+    height:330px;
     width: 700px;
     align-items: center;
   }
@@ -320,6 +320,7 @@ body {
     font-size: large;
     color: white;
     border-radius: 5px;
+
     width: 100%;
     /* display: block; */
     align-items: center;
@@ -329,6 +330,8 @@ body {
   }
   
   a.course p {
+    margin: auto;
+    text-align: justify;
     list-style-type: square;
     font-family:Arial, Helvetica, sans-serif;
     /* margin: 10%; */
