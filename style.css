@@ -19,6 +19,16 @@
 
 }
 
+@font-face {
+  font-family: 'Bogart';
+  src: url('Bogart-Semibold-trial.ttf');
+}
+
+@font-face {
+  font-family: 'Bogart-bold';
+  src: url('Bogart-Bold-trial.ttf');
+}
+
 html {
   height: 100%;
 }
@@ -226,18 +236,19 @@ body {
   }
 
   h2.intro {
-    font-family: 'Stanley', Arial, sans-serif;
+    font-family: 'Bogart', Arial, sans-serif;
     text-align: center;
     margin-bottom: 10px;
   }
 
   .year {
-    font-family: 'Stanley', Arial, sans-serif;
+    font-family: 'Bogart', Arial, sans-serif;
     text-align: left;
     padding-left: 30px;
     margin-top: 30px;
     margin-bottom: 0px;
     width: 700px;
+    color: rgb(49, 49, 49);
   }
 
   p.intro{
@@ -258,7 +269,6 @@ body {
     overflow: hidden;
     border-bottom-style: double;
     border-width: 10px;
-    /* border-color: var(--caput-mortuum); */
     border-color: rgb(226, 226, 226);
     background-color: rgb(255, 255, 255);
     /* background-color: rgb(14, 12, 12) */
@@ -276,13 +286,14 @@ body {
     margin: auto;   
     padding-top: 30px;
     overflow: visible;
-    border-style:dashed;
-    border-width: 2px;
+    border-style:solid;
+    border-width: 1px;
     border-radius: 10px;
     /* border-color:  rgb(14, 12, 12); */
     /* background-color: rgb(255, 255, 255); */
-    border-color: var(--sienna);
-    height:330px;
+    /* border-color: var(--sienna); */
+    border-color: rgb(49, 49, 49);;
+    height:360px;
     width: 700px;
     align-items: center;
   }
@@ -307,7 +318,7 @@ body {
 
   li a {
     font-size: 1.1em;
-    font-family: 'Stanley', Arial, sans-serif;
+    font-family: 'Bogart-bold', Arial, sans-serif;
     display: block;
     color: rgb(0, 0, 0);
     text-align: center;

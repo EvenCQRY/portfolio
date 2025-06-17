@@ -32,7 +32,7 @@ anime({
   });
   setTimeout(function () {
     window.scrollBy({
-      top:70,
+      top:230,
       behavior: 'smooth',
     });
   }, 700);
