@@ -5,6 +5,7 @@
   <title>Even Coquery</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 <main>
     <ul class="menu">
@@ -27,6 +28,17 @@
       </section>
       <h3 class="year">First year</h3> 
       <ul class="courses">
+
+        <li data-toggle="openPopup" data-popup-target="gr" class="course-li">
+          <a class="course" id="gr">General Relativity</a>
+        </li>
+
+        <li data-toggle="openPopup" data-popup-target="qm" class="course-li">
+          <a class="course" id="qm">Quantum Mechanics</a>
+
+<!-- 
+        <li data-toggle="openPopup" data-popup-target="grpop" class="course-li"><a class="course" id="gr">General Relativity</a></li>
+        
         <li class="course-li"><a class="course" id="gr"> General Relativity 
           <div class="expand-content"> <p>An introductory course to general relativity. Essential material covered:</p>
             <ul class="material">
@@ -154,11 +166,15 @@
           </div> 
           </a>
         </li>
+        
+        <li id="openPopup" class="course-li"><a class="course" id="gr">Open popup page</a></li> -->
+    </ul>
 
-
-
-      </ul>
-
+    <div id="popupOverlay">
+      <div class="popup-content">
+        <button class="close-btn">✕</button> <!-- Inside the popup box -->
+        <div id="popupBody"></div>
+      </div>
     </div>
 </main>
 

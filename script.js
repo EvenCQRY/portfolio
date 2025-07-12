@@ -1,4 +1,5 @@
-window.scrollTo(0,0);
+// window.scrollTo(0,0);
+window.scrollTo(0,80);
 window.addEventListener("DOMContentLoaded",
   () => {
     anime({
@@ -23,20 +24,50 @@ window.addEventListener("DOMContentLoaded",
     duration: 600,
     delay:180
   });
-anime({
+  anime({
     targets: '#location-curtain', 
     width: [ '40%', '0%' ],
     easing: 'easeInOutExpo',
     duration: 600,
     delay: 270
   });
+  anime({
+    targets: '#title-curtain', 
+    scaleX:[1, 0],
+    easing: 'easeInOutExpo',
+    duration: 600
+  });
+  anime({
+    targets: '.hero',
+    height: '30vh',
+    easing: 'easeInOutExpo',
+    duration: 600,
+    delay:1000
+  });
+  anime({
+    targets: '.hero-content',
+    scale: '0.7',
+    easing: 'easeInOutExpo',
+    duration: 600,
+    delay:1000
+  });
   setTimeout(function () {
     window.scrollBy({
-      top:230,
+      top:-80,
       behavior: 'smooth',
     });
   }, 700);
- });
+});
+//   setTimeout(function () {
+//     window.scrollBy({
+//       top:230,
+//       behavior: 'smooth',
+//     });
+//   }, 700);
+//  });
+
+
+
 
 
 

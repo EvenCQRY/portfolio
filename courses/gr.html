@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>General Relativity</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 1.5rem;
+      font-family: 'Segoe UI', sans-serif;
+      background: transparent; /* Transparent so it blends into the popup shell */
+      color: #222;
+    }
+
+    .course-popup {
+      background: #fff;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      margin: 0 auto;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    .course-title {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+    }
+
+    .course-description {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .content-heading {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      color: #34495e;
+    }
+
+    .course-content {
+      list-style: disc inside;
+      padding-left: 0;
+      font-size: 1rem;
+    }
+
+    .course-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.97); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="course-popup">
+    <h2 class="course-title">General Relativity</h2>
+    <p class="course-description">
+      This course introduces Einstein's theory of General Relativity, explaining how gravity arises from the curvature of spacetime and exploring its profound consequences in cosmology and astrophysics.
+    </p>
+
+    <h3 class="content-heading">What You'll Learn:</h3>
+    <ul class="course-content">
+      <li>Mathematics of curved spacetime: tensors and metrics</li>
+      <li>Einstein’s field equations</li>
+      <li>Black holes and the Schwarzschild solution</li>
+      <li>Gravitational time dilation</li>
+      <li>Cosmological models and the Big Bang</li>
+      <li><strong>Project:</strong> Simulate the bending of light near a black hole</li>
+    </ul>
+  </div>
+</body>
+</html>
