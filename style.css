@@ -19,6 +19,67 @@
 
 }
 
+.lato-thin {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.lato-light {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lato-bold {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.lato-black {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.lato-thin-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.lato-light-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.lato-regular-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.lato-bold-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.lato-black-italic {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
 @font-face {
   font-family: 'Bogart';
   src: url('Bogart-Semibold-trial.ttf');
@@ -36,7 +97,8 @@ html {
 body {
     height: 100%;
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    /* font-family: 'Segoe UI', sans-serif; */
+    font-family: 'Lato', sans-serif;
     
     /* background-image: url("images/flowers.jpg"); */
     /* background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), 
@@ -317,7 +379,8 @@ body {
   }
 
   li a {
-    font-size: 1.1em;
+    /* font-size: 1.1em; */
+    font-size: small;
     font-family: 'Bogart-bold', Arial, sans-serif;
     display: block;
     color: rgb(0, 0, 0);
@@ -328,7 +391,7 @@ body {
 
   a.course {
     background-color: var(--caramel-light);
-    font-size: large;
+    font-size: small;
     color: white;
     border-radius: 5px;
 
@@ -420,7 +483,7 @@ body {
   }
 
   li a:hover {
-    background-color: var(--caramel-light);
+    background-color: var(--rust);
     color: white;
     border-radius: 5px;
     transition: ease-in-out;

@@ -101,6 +101,13 @@ window.addEventListener("DOMContentLoaded", () => {
     duration: 600,
     delay: 1000
   });
+  anime({
+    delay: 1000,
+    duration: 600,
+    easing: 'easeInOutExpo',
+    targets: '.title-wrapper',
+    scale: '0.7',
+  });
   setTimeout(() => {
     window.scrollBy({
       top: -80,
